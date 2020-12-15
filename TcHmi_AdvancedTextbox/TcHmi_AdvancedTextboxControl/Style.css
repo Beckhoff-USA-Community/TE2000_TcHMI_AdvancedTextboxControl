@@ -1,0 +1,56 @@
+﻿/* General theme independed control css. */
+
+.TcHmi_Controls_Training_AdvancedTextbox.TcHmi_Controls_Beckhoff_TcHmiTextbox {
+    overflow: visible;
+}
+
+.TcHmi_Controls_Training_AdvancedTextbox-Template {
+    width: 100%;
+    height: 100%;
+}
+
+
+    .TcHmi_Controls_Training_AdvancedTextbox-Template .tooltiptext {
+        visibility: hidden;
+        width: 150px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        left: 50%;
+        margin-left: -75px;
+        white-space: pre-line;
+    }
+
+        .TcHmi_Controls_Training_AdvancedTextbox-Template .tooltiptext::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+        }
+
+    .TcHmi_Controls_Training_AdvancedTextbox-Template .tooltiptexttop {
+        bottom: 150%;
+    }
+
+        .TcHmi_Controls_Training_AdvancedTextbox-Template .tooltiptexttop::after {
+            top: 100%;
+            border-color: black transparent transparent transparent;
+        }
+
+
+
+    .TcHmi_Controls_Training_AdvancedTextbox-Template .tooltiptextbottom {
+        top: 150%;
+    }
+
+
+        .TcHmi_Controls_Training_AdvancedTextbox-Template .tooltiptextbottom::after {
+            bottom: 100%;
+            border-color: transparent transparent black transparent;
+        }

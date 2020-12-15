@@ -1,0 +1,72 @@
+﻿<div id="Content1" data-tchmi-type="TcHmi.Controls.System.TcHmiContent" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-right="0" data-tchmi-bottom="0">
+
+<div id="Content1_AdvTextbox" data-tchmi-type="TcHmi.Controls.Training.AdvancedTextbox" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="83" data-tchmi-left-unit="px" data-tchmi-top="53" data-tchmi-top-unit="px" data-tchmi-width="150" data-tchmi-width-unit="px" data-tchmi-auto-focus-out="True">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+<script data-tchmi-target-attribute="data-tchmi-inputsettingsallow" type="application/json">
+{
+  "Numbers": true,
+  "Strings": true
+}
+</script>
+<script data-tchmi-target-attribute="data-tchmi-inputsettingscheck" type="application/json">
+{
+  "Highlighting": true,
+  "Numbers": {
+    "Check": true,
+    "Max": 500.0,
+    "Min": 0.0
+  },
+  "Strings": {
+    "Check": false,
+    "MaxCharacters": 255.0,
+    "ForbidMoreCharacters": false
+  },
+  "Tooltip": true
+}
+</script>
+<script data-tchmi-target-attribute="data-tchmi-popupkeyboardsettings" type="application/json">
+{
+  "Active": true,
+  "CenterKeypadKeyboards": false,
+  "KeyboardFontSize": 13.0,
+  "MinHeight": 100.0,
+  "MinWidth": 100.0,
+  "Textbox": true,
+  "TextboxFontSize": 13.0,
+  "Type": "KeyboardLayouts/CustomerNumpad.json",
+  "ZIndex": 1000
+}
+</script>
+
+
+
+
+<script data-tchmi-target-attribute="data-tchmi-checkcolors" type="application/json">
+{
+  "BadHighlight": {
+    "color": "rgba(255, 0, 0, 1)"
+  },
+  "GoodHighlight": {
+    "color": "rgba(0, 255, 122, 1)"
+  }
+}
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "Content1_AdvTextbox.onUserInteractionFinishedWithCheckOk",
+    "actions": []
+  }
+]
+</script>
+</div>
+
+</div>

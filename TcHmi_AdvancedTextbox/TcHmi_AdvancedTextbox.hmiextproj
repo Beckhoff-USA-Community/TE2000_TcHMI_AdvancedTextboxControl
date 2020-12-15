@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <PropertyGroup>
+    <TcHmiDirectory>$(registry:HKEY_LOCAL_MACHINE\Software\Beckhoff\TwinCAT3\3.1@InstallDir)\..\Functions\TE2000-HMI-Engineering</TcHmiDirectory>
+    <TcHmiDirectory Condition="'$(TcHmiDirectory)'==''">$(registry:HKEY_LOCAL_MACHINE\Software\Wow6432Node\Beckhoff\TwinCAT3\3.1@InstallDir)\..\Functions\TE2000-HMI-Engineering</TcHmiDirectory>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">TwinCAT HMI</Platform>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">15.0</VisualStudioVersion>
+    <AvailablePlatforms>TwinCAT HMI</AvailablePlatforms>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <TcHmiCreatorVersion>[1.12,]</TcHmiCreatorVersion>
+    <TargetFrameworkMoniker>native,Version=v1.12.0,Profile=tchmi</TargetFrameworkMoniker>
+    <TargetFramework>native1.12-tchmi</TargetFramework>
+    <EnableTypeScript>true</EnableTypeScript>
+    <ProjectTypeGuids>{3B740506-4966-4147-AB1F-357FE08946EA}</ProjectTypeGuids>
+    <ProjectGuid>b9748866-2d85-4d9a-8e98-51087020ce54</ProjectGuid>
+    <ProjectName>TcHmi_AdvancedTextbox</ProjectName>
+    <Name>TcHmi_AdvancedTextbox</Name>
+    <HmiInitial>1.12.706.0</HmiInitial>
+    <HmiRecent>1.12.742.5</HmiRecent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|TwinCAT HMI' ">
+    <PlatformTarget>TwinCAT HMI</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TypeScriptToolsVersion>3.9</TypeScriptToolsVersion>
+    <DefaultNamespace>TcHmi_AdvancedTextbox</DefaultNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|TwinCAT HMI' ">
+    <PlatformTarget>TwinCAT HMI</PlatformTarget>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TypeScriptToolsVersion>3.9</TypeScriptToolsVersion>
+    <DefaultNamespace>TcHmi_AdvancedTextbox</DefaultNamespace>
+    <TypeScriptBuildMode>False</TypeScriptBuildMode>
+  </PropertyGroup>
+  <PropertyGroup Label="TwinCatHMI">
+    <TcHmiExtensionTypes>{CC169D49-EEDD-4BAF-8151-63DF12EDD7B4}</TcHmiExtensionTypes>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TwinCATHmi_Tasks>$(TcHmiDirectory)\MSBuild\Beckhoff.TwinCAT.HMI.tasks</TwinCATHmi_Tasks>
+    <TwinCATHmi_Targets>$(TcHmiDirectory)\MSBuild\Beckhoff.TwinCAT.HMI.targets</TwinCATHmi_Targets>
+  </PropertyGroup>
+  <Target Name="GetFrameworkPaths" />
+  <Import Project="$(TwinCATHmi_Tasks)" />
+  <Import Project="$(TwinCATHmi_Targets)" />
+  <ItemGroup>
+    <Content Include="packages.config">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="tsconfig.tpl.json">
+      <SubType>Content</SubType>
+      <Visible>true</Visible>
+    </Content>
+    <Content Include="tsconfig.json">
+      <SubType>Content</SubType>
+      <Visible>true</Visible>
+      <DependentUpon>tsconfig.tpl.json</DependentUpon>
+    </Content>
+    <HmiManifest Include="Manifest.json" />
+    <Content Include="TcHmi_AdvancedTextbox.nuspec" />
+    <Content Include="TcHmi_AdvancedTextboxControl\Icons\16x16.png" />
+    <Content Include="TcHmi_AdvancedTextboxControl\Icons\24x24.png" />
+    <Content Include="TcHmi_AdvancedTextboxControl\Icons\32x32.png" />
+    <Content Include="TcHmi_AdvancedTextboxControl\Icons\64x64.png" />
+    <Content Include="TcHmi_AdvancedTextboxControl\Template.html" />
+    <Content Include="TcHmi_AdvancedTextboxControl\Themes\Base\Style.css" />
+    <Content Include="TcHmi_AdvancedTextboxControl\TcHmi_AdvancedTextboxControl.ts" />
+    <Content Include="TcHmi_AdvancedTextboxControl\Style.css" />
+    <Content Include="TcHmi_AdvancedTextboxControl\Description.json" />
+    <Content Include="TcHmi_AdvancedTextboxControl\Schema\Types.Schema.json" />
+    <Content Include="packages.xsd">
+      <SubType>Content</SubType>
+      <Visible>false</Visible>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Licenses" />
+    <Folder Include="TcHmi_AdvancedTextboxControl" />
+    <Folder Include="TcHmi_AdvancedTextboxControl\Icons" />
+    <Folder Include="TcHmi_AdvancedTextboxControl\Schema" />
+    <Folder Include="TcHmi_AdvancedTextboxControl\Themes" />
+    <Folder Include="TcHmi_AdvancedTextboxControl\Themes\Base" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Licenses\License.txt">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(TypeScriptSdkDir)\$(TypeScriptToolsVersion)\build\Microsoft.TypeScript.targets" Condition="Exists('$(TypeScriptSdkDir)\$(TypeScriptToolsVersion)\build\Microsoft.TypeScript.targets')" />
+  <PropertyGroup>
+    <PreBuildEventDependsOn>
+    </PreBuildEventDependsOn>
+    <PostBuildEventDependsOn>
+    </PostBuildEventDependsOn>
+  </PropertyGroup>
+  <Target Name="PreBuildEvent" Condition="'$(PreBuildEvent)'!=''" DependsOnTargets="$(PreBuildEventDependsOn)">
+    <Exec WorkingDirectory="$(OutDir)" Command="$(PreBuildEvent)" />
+  </Target>
+  <Target Name="PostBuildEvent" Condition="'$(PostBuildEvent)' != '' and ('$(RunPostBuildEvent)'=='Always' or '$(RunPostBuildEvent)'=='OnOutputUpdated')" DependsOnTargets="$(PostBuildEventDependsOn)">
+    <Exec WorkingDirectory="$(OutDir)" Command="$(PostBuildEvent)" />
+  </Target>
+  <PropertyGroup>
+    <BuildDependsOn>
+      PreBuildEvent;
+      CoreBuild;
+      PostBuildEvent
+    </BuildDependsOn>
+  </PropertyGroup>
+  <Target Name="CoreBuild">
+    <Message Text="Microsoft.TypeScript.targets: $(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Importance="high" />
+    <Message Text="TypeScriptSdkDir: $(TypeScriptSdkDir)" Importance="high" />
+    <Message Text="TypeScriptToolsVersion: $(TypeScriptToolsVersion)" Importance="high" />
+    <Message Text="LastKnownTypeScriptVersion: $(LastKnownTypeScriptVersion)" Importance="high" />
+    <CallTarget Targets="FindConfigFiles" />
+    <CallTarget Targets="CompileTypeScript" />
+    <CallTarget Targets="PreComputeCompileTypeScript" />
+    <CallTarget Targets="PreComputeCompileTypeScriptWithTSConfig" />
+    <CallTarget Targets="CompileTypeScriptWithTSConfig" />
+    <CallTarget Targets="GetTypeScriptOutputForPublishing" />
+  </Target>
+  <Target Name="Build" DependsOnTargets="$(BuildDependsOn)" />
+  <Target Name="Clean">
+    <CallTarget Targets="TypeScriptDeleteCompilerOutput" />
+    <CallTarget Targets="TypeScriptBuildModeClean" />
+  </Target>
+  <Target Name="ReBuild" DependsOnTargets="Clean; Build" />
+</Project>

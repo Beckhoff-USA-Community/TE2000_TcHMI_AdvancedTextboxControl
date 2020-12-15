@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package>
+  <metadata>
+    <id>TcHmi_AdvancedTextbox</id>
+    <version>1.0.4</version>
+    <description>TcHmi 1.12 training sample code for an advanced textbox</description>
+    <authors>Beckhoff-USA</authors>
+    <title>TcHmi_AdvancedTextbox</title>
+    <license type="file">License.txt</license>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <releaseNotes>Updated licensing</releaseNotes>
+    <copyright>Copyright 2020</copyright>
+    <tags>TwinCAT HMI</tags>
+    <dependencies>
+      <group targetFramework="native1.12-tchmi">
+        <dependency id="Beckhoff.TwinCAT.HMI.Framework" version="12.742.5" />
+        <dependency id="Beckhoff.TwinCAT.HMI.Controls" version="12.742.5" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="**\*" target="runtimes\native1.12-tchmi\" exclude="**\*.nuspec;**\*.tpl.json;**\*.hmi*proj;**\~*;**\*.tmp;**\tmp*;**\*.user;**\tsconfig.json;**\*.log;**\*.bak;**\obj\**\*;packages.config;packages.xsd;.hmiframework\**\*;.hmipkgs\**\*;.git;.gitignore;.gitattributes" />
+    <file src="Licenses\License.txt" target="" />
+  </files>
+</package>

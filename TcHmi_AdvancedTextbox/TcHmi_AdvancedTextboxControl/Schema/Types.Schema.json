@@ -1,0 +1,130 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+    "definitions": {
+        "TcHmi.Controls.Training.AdvancedTextbox": {
+            "type": "object",
+            "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+            "frameworkControlType": "AdvancedTextbox",
+            "frameworkControlNamespace": "TcHmi.Controls.Training"
+        },
+        "TcHmi.Controls.Training.AdvancedTextbox.PopUpKeyboardSettings": {
+            "type": "object",
+            "properties": {
+                "Active": {
+                    "type": "boolean"
+                },
+                "Type": {
+                    "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiKeyboard.ProjectKeyboardLayouts"
+                },
+                "Textbox": {
+                    "type": "boolean"
+                },
+                "TextboxFontSize": {
+                    "type": "number"
+                },
+                "KeyboardFontSize": {
+                    "type": "number"
+                },
+                "MinWidth": {
+                    "type": "number"
+                },
+                "MinHeight": {
+                    "type": "number"
+                },
+
+              "CenterKeypadKeyboards": {
+                "type": "boolean"
+              },
+              "ZIndex": {
+                "anyOf": [
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+
+              },
+              "ScaleMode": {
+                "$ref": "tchmi:framework#/definitions/ScaleMode"
+              }
+            }
+        },
+        "TcHmi.Controls.Training.AdvancedTextbox.InputSettingsCheck": {
+            "type": "object",
+            "bindable": true,
+            "properties": {
+                "Numbers": {
+                    "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Training.AdvancedTextbox.CheckNumbers"
+                },
+                "Strings": {
+                    "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Training.AdvancedTextbox.CheckStrings"
+                },
+                "Highlighting": {
+                    "type": "boolean",
+                    "bindable": true
+                },
+                "Tooltip": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "TcHmi.Controls.Training.AdvancedTextbox.InputSettingsAllow": {
+            "type": "object",
+            "properties": {
+                "Numbers": {
+                    "type": "boolean"
+                },
+                "Strings": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "TcHmi.Controls.Training.AdvancedTextbox.CheckStrings": {
+            "type": "object",
+            "properties": {
+                "Check": {
+                    "type": "boolean"
+                },
+                "MaxCharacters": {
+                    "type": "number"
+                },
+                "ForbidMoreCharacters": {
+                    "type": "boolean"
+                }
+            }
+
+        },
+        "TcHmi.Controls.Training.AdvancedTextbox.CheckNumbers": {
+            "$schema": "http://json-schema.org/draft-04/schema",
+
+            "type": "object",
+            "properties": {
+                "Check": {
+                    "type": "boolean"
+                },
+                "Max": {
+                    "type": "number"
+                },
+                "Min": {
+                    "type": "number"
+                }
+            }
+
+        },
+        "TcHmi.Controls.Training.AdvancedTextbox.CheckColors": {
+            "$schema": "http://json-schema.org/draft-04/schema",
+            "type": "object",
+            "properties": {
+                "GoodHighlight": {
+                    "$ref": "tchmi:framework#/definitions/Color"
+                },
+                "BadHighlight": {
+                    "$ref": "tchmi:framework#/definitions/Color"
+                }
+            }
+        }
+
+    }
+}

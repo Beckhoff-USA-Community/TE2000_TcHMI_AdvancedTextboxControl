@@ -1,0 +1,27 @@
+{
+   "$schema": "http://json-schema.org/draft-04/schema",
+   "definitions": {
+      "RadialGaugeLabelPosition": {
+         "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiRadialGauge.LabelPosition"
+      },
+      "TcHmi.Controls.Beckhoff.TcHmiRadialGauge": {
+         "$schema": "http://json-schema.org/draft-04/schema",
+         "type": "object",
+         "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+         "frameworkControlType": "TcHmiRadialGauge",
+         "frameworkControlNamespace": "TcHmi.Controls.Beckhoff"
+      },
+      "TcHmi.Controls.Beckhoff.TcHmiRadialGauge.LabelPosition": {
+         "title": "LabelPosition",
+         "type": "string",
+         "enum": [
+            "Outside",
+            "Inside"
+         ],
+         "default": "Inside"
+      },
+      "TcHmiRadialGauge": {
+         "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiRadialGauge"
+      }
+   }
+}
