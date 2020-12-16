@@ -29,9 +29,9 @@
     "alwaysStrict": false
   },
   "include": [
-    "C:/Users/ZacharyD/Source/Repos/ZDaulton/TcHmiAdvancedTextbox/Packages/Beckhoff.TwinCAT.HMI.Framework.12.742.5/runtimes/native1.12-tchmi/TcHmi.d.ts",
-    "C:/Users/ZacharyD/Source/Repos/ZDaulton/TcHmiAdvancedTextbox/Packages/Beckhoff.TwinCAT.HMI.Controls.12.742.5/runtimes/native1.12-tchmi/TcHmiTextbox/TcHmiTextbox.d.ts",
-    "C:/Users/ZacharyD/Source/Repos/ZDaulton/TcHmiAdvancedTextbox/Packages/Beckhoff.TwinCAT.HMI.Controls.12.742.5/runtimes/native1.12-tchmi/TcHmiKeyboard/TcHmiKeyboard.d.ts"
+    "C:/Users/ZacharyD/source/repos/ZDaulton/TcHmiAdvancedTextbox/Packages/Beckhoff.TwinCAT.HMI.Framework.12.742.5/runtimes/native1.12-tchmi/TcHmi.d.ts",
+    "C:/Users/ZacharyD/source/repos/ZDaulton/TcHmiAdvancedTextbox/Packages/Beckhoff.TwinCAT.HMI.Controls.12.742.5/runtimes/native1.12-tchmi/TcHmiTextbox/TcHmiTextbox.d.ts",
+    "C:/Users/ZacharyD/source/repos/ZDaulton/TcHmiAdvancedTextbox/Packages/Beckhoff.TwinCAT.HMI.Controls.12.742.5/runtimes/native1.12-tchmi/TcHmiKeyboard/TcHmiKeyboard.d.ts"
   ],
   "files": [
     "TcHmi_AdvancedTextboxControl/TcHmi_AdvancedTextboxControl.ts"
