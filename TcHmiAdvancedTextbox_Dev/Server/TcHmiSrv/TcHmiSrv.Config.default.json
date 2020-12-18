@@ -28,8 +28,9 @@
     "DEFLATECOMPRESSIONLEVEL": 5,
     "DISCOVERY": 2,
     "ENDPOINTS": [
-        "http://127.0.0.1:13001",
-        "http://127.0.0.1:3001"
+        "http://192.168.0.9:13001",
+        "http://192.168.0.9:3003",
+        "http://127.0.0.1:3003"
     ],
     "ETAGENABLED": true,
     "EXTENSIONS": {
@@ -2828,15 +2829,15 @@
     "USERSELECTTYPE": 0,
     "VIDEOSEGMENTSIZE": 1048576,
     "VIRTUALDIRECTORIES": {
-        "/": "C:\\Users\\DaymonT\\Source\\Repos\\TcHmiAdvancedTextbox\\TcHmiAdvancedTextbox_Dev",
-        "/Beckhoff.TwinCAT.HMI.Controls": "C:\\Users\\DaymonT\\Source\\Repos\\TcHmiAdvancedTextbox\\Packages\\Beckhoff.TwinCAT.HMI.Controls.12.742.5\\runtimes\\native1.12-tchmi",
-        "/Beckhoff.TwinCAT.HMI.Functions": "C:\\Users\\DaymonT\\Source\\Repos\\TcHmiAdvancedTextbox\\Packages\\Beckhoff.TwinCAT.HMI.Functions.12.742.5\\runtimes\\native1.12-tchmi",
-        "/TcHmi_AdvancedTextbox": "C:\\Users\\DaymonT\\Source\\Repos\\TcHmiAdvancedTextbox\\TcHmi_AdvancedTextbox",
-        "/bin": "C:\\Users\\DaymonT\\Source\\Repos\\TcHmiAdvancedTextbox\\TcHmiAdvancedTextbox_Dev\\bin\\",
+        "/": "C:\\Users\\MichaelWil\\Documents\\GitHub\\TcHmiAdvancedTextbox\\TcHmiAdvancedTextbox_Dev",
+        "/Beckhoff.TwinCAT.HMI.Controls": "C:\\Users\\MichaelWil\\Documents\\GitHub\\TcHmiAdvancedTextbox\\Packages\\Beckhoff.TwinCAT.HMI.Controls.12.742.5\\runtimes\\native1.12-tchmi",
+        "/Beckhoff.TwinCAT.HMI.Functions": "C:\\Users\\MichaelWil\\Documents\\GitHub\\TcHmiAdvancedTextbox\\Packages\\Beckhoff.TwinCAT.HMI.Functions.12.742.5\\runtimes\\native1.12-tchmi",
+        "/TcHmi_AdvancedTextbox": "C:\\Users\\MichaelWil\\Documents\\GitHub\\TcHmiAdvancedTextbox\\TcHmi_AdvancedTextbox",
+        "/bin": "C:\\Users\\MichaelWil\\Documents\\GitHub\\TcHmiAdvancedTextbox\\TcHmiAdvancedTextbox_Dev\\bin\\",
         "/bin/Beckhoff.TwinCAT.HMI.Controls": "C:\\Users\\ZacharyD\\Source\\Repos\\ZDaulton\\TcHmiAdvancedTextbox\\TcHmiAdvancedTextbox_Dev\\bin\\Beckhoff.TwinCAT.HMI.Controls",
         "/bin/Beckhoff.TwinCAT.HMI.Functions": "C:\\Users\\ZacharyD\\Source\\Repos\\ZDaulton\\TcHmiAdvancedTextbox\\TcHmiAdvancedTextbox_Dev\\bin\\Beckhoff.TwinCAT.HMI.Functions",
         "/bin/TcHmi_AdvancedTextbox": "C:\\Users\\ZacharyD\\Source\\Repos\\ZDaulton\\TcHmiAdvancedTextbox\\TcHmiAdvancedTextbox_Dev\\bin\\TcHmi_AdvancedTextbox",
-        "/bin/framework": "C:\\Users\\DaymonT\\Source\\Repos\\TcHmiAdvancedTextbox\\TcHmiAdvancedTextbox_Dev\\bin\\framework",
-        "/framework": "C:\\Users\\DaymonT\\Source\\Repos\\TcHmiAdvancedTextbox\\Packages\\Beckhoff.TwinCAT.HMI.Framework.12.742.5\\runtimes\\native1.12-tchmi"
+        "/bin/framework": "C:\\Users\\MichaelWil\\Documents\\GitHub\\TcHmiAdvancedTextbox\\TcHmiAdvancedTextbox_Dev\\bin\\framework",
+        "/framework": "C:\\Users\\MichaelWil\\Documents\\GitHub\\TcHmiAdvancedTextbox\\Packages\\Beckhoff.TwinCAT.HMI.Framework.12.742.5\\runtimes\\native1.12-tchmi"
     }
 }

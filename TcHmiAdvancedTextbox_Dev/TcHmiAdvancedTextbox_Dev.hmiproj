@@ -12,7 +12,7 @@
     <HmiTitle>Please enter your Title...</HmiTitle>
     <HmiVerboseLevel>2</HmiVerboseLevel>
     <HmiVersion>1.0.0.0</HmiVersion>
-    <HmiCommunicationServerPort>3001</HmiCommunicationServerPort>
+    <HmiCommunicationServerPort>3003</HmiCommunicationServerPort>
     <HmiLogTcHmiServerMessages>false</HmiLogTcHmiServerMessages>
     <HmiLogDesignerModeComMessages>false</HmiLogDesignerModeComMessages>
     <HmiServerVersion>Latest</HmiServerVersion>
@@ -24,7 +24,7 @@
     <AzureFunctionsVersion>v2</AzureFunctionsVersion>
     <Name>TcHmiAdvancedTextbox_Dev</Name>
     <HmiCommunicationServerAuthPort>13001</HmiCommunicationServerAuthPort>
-    <HmiCommunicationRouterPort>10104</HmiCommunicationRouterPort>
+    <HmiCommunicationRouterPort>10105</HmiCommunicationRouterPort>
     <HmiInitial>1.12.706.0</HmiInitial>
     <HmiRecent>1.12.742.5</HmiRecent>
   </PropertyGroup>
