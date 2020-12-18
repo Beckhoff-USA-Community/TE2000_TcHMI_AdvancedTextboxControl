@@ -30,6 +30,6 @@
     "bin/"
   ],
   "include": [
-    "C:/Users/ZacharyD/source/repos/ZDaulton/TcHmiAdvancedTextbox/Packages/Beckhoff.TwinCAT.HMI.Framework.12.742.5/runtimes/native1.12-tchmi/TcHmi.d.ts"
+    "C:/Users/DaymonT/Source/Repos/TcHmiAdvancedTextbox/Packages/Beckhoff.TwinCAT.HMI.Framework.12.742.5/runtimes/native1.12-tchmi/TcHmi.d.ts"
   ]
 }
