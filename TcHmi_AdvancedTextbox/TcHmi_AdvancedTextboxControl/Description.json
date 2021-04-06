@@ -1,0 +1,220 @@
+﻿{
+    "$schema": "../.hmiframework/Schema/ControlDescription.Schema.json",
+    "apiVersion": 1,
+    "name": "AdvancedTextbox",
+    "namespace": "TcHmi.Controls.Training",
+    "displayName": "Advanced Textbox",
+    "version": {
+        "full": "1.0.0.0",
+        "major": 1,
+        "minor": 0,
+        "revision": 0,
+        "build": 0
+    },
+    "visible": true,
+    "themeable": "Standard",
+    "base": "TcHmi.Controls.Beckhoff.TcHmiTextbox",
+    "description": "A training sample for extending a custom framework control off of the TcHmiTextbox with allow and validation functions, highlighting, and an auto popup keyboard.",
+    "properties": {
+        "containerControl": false,
+        "geometry": {
+            "width": 150,
+            "height": 26
+        }
+    },
+    "template": "Template.html",
+    "icons": [
+        {
+            "name": "Icons/16x16.png",
+            "width": 16,
+            "height": 16
+        },
+        {
+            "name": "Icons/24x24.png",
+            "width": 24,
+            "height": 24
+        },
+        {
+            "name": "Icons/32x32.png",
+            "width": 32,
+            "height": 32
+        },
+        {
+            "name": "Icons/64x64.png",
+            "width": 64,
+            "height": 64
+        }
+    ],
+    "dependencyFiles": [
+        {
+            "name": "TcHmi_AdvancedTextboxControl.js",
+            "type": "JavaScript",
+            "description": "Contains all the main logic."
+        },
+        {
+            "name": "Style.css",
+            "type": "Stylesheet",
+            "description": "Theme independent style"
+        }
+    ],
+    "themes": {
+        "Base": {
+            "resources": [
+                {
+                    "name": "Themes/Base/Style.css",
+                    "type": "Stylesheet",
+                    "description": "Theme dependent style"
+                }
+            ]
+        }
+    },
+    "attributes": [
+        {
+            "name": "data-tchmi-checkcolors",
+            "propertyName": "CheckColors",
+            "propertySetterName": "setCheckColors",
+            "propertyGetterName": "getCheckColors",
+            "displayName": "CheckColors",
+            "visible": true,
+            "themeable": "Standard",
+            "displayPriority": 30,
+            "type": "tchmi:framework#/definitions/TcHmi.Controls.Training.AdvancedTextbox.CheckColors",
+            "category": "Check Colors",
+            "description": "",
+            "readOnly": false,
+            "bindable": true,
+            "heritable": false,
+            "defaultValue": null,
+            "defaultValueInternal": null
+        },
+        {
+            "name": "data-tchmi-inputsettingsallow",
+            "propertyName": "InputSettingsAllow",
+            "propertySetterName": "setInputSettingsAllow",
+            "propertyGetterName": "getInputSettingsAllow",
+            "displayName": "Allow",
+            "visible": true,
+            "themeable": "None",
+            "displayPriority": 10,
+            "type": "tchmi:framework#/definitions/TcHmi.Controls.Training.AdvancedTextbox.InputSettingsAllow",
+            "category": "Input Settings",
+            "description": "Describes the type of input is allowed in the textbox",
+            "readOnly": false,
+            "bindable": true,
+            "heritable": false,
+            "defaultValue": {
+                "Numbers": true,
+                "Strings": true
+            },
+            "defaultValueInternal": {
+                "Numbers": true,
+                "Strings": true
+            }
+        },
+        {
+            "name": "data-tchmi-inputsettingscheck",
+            "propertyName": "InputSettingsCheck",
+            "propertySetterName": "setInputSettingsCheck",
+            "propertyGetterName": "getInputSettingsCheck",
+            "displayName": "Check",
+            "visible": true,
+            "themeable": "None",
+            "displayPriority": 10,
+            "type": "tchmi:framework#/definitions/TcHmi.Controls.Training.AdvancedTextbox.InputSettingsCheck",
+            "category": "Input Settings",
+            "description": "Describes the type of value checking",
+            "readOnly": false,
+            "bindable": true,
+            "heritable": false,
+            "defaultValue": {
+                "Numbers": {
+                    "Check": false,
+                    "Max": 0.0,
+                    "Min": 0.0
+                },
+                "Strings": {
+                    "Check": false,
+                    "MaxCharacters": 255.0,
+                    "ForbidMoreCharacters": false
+                },
+                "Highlighting": false,
+                "Tooltip": false
+            },
+            "defaultValueInternal": null
+        },
+        {
+            "name": "data-tchmi-popupkeyboardsettings",
+            "propertyName": "PopUpKeyboardSettings",
+            "propertySetterName": "setPopUpKeyboardSettings",
+            "propertyGetterName": "getPopUpKeyboardSettings",
+            "displayName": "Settings",
+            "visible": true,
+            "themeable": "None",
+            "displayPriority": 10,
+            "type": "tchmi:framework#/definitions/TcHmi.Controls.Training.AdvancedTextbox.PopUpKeyboardSettings",
+            "category": "PopUp Keyboard",
+            "description": "Describes the type of the keyboard that should automatically pops up",
+            "readOnly": false,
+            "bindable": true,
+            "heritable": false,
+            "defaultValue": {
+                "Active": false,
+                "Type": "Numpad",
+                "Textbox": false,
+                "MinWidth": 0,
+                "MinHeight": 0,
+                "KeyboardFontSize": 13,
+                "TextboxFontSize": 13,
+                "Width": 200.0,
+                "Height": 200.0,
+              "CenterKeypadKeyboards": false,
+              "ZIndex" :  null
+            },
+            "defaultValueInternal": null
+        }
+
+
+
+
+    ],
+    "attributeCategories": [
+        {
+            "name": "Check Colors",
+            "displayPriority": 10
+        },
+        {
+            "name": "Input Settings",
+            "displayPriority": 10
+        },
+        {
+            "name": "PopUp Keyboard",
+            "displayPriority": 10
+        }
+    ],
+    "functions": [],
+    "access": [
+        {
+            "name": "allowValueChange",
+            "displayName": "allowValueChange",
+            "description": "",
+            "visible": true,
+            "defaultValueInternal": null
+        }
+    ],
+    "events": [
+        {
+            "name": ".onUserInteractionFinishedWithCheckOk",
+            "displayName": ".onUserInteractionFinishedWithCheckOk",
+            "visible": true,
+            "displayPriority": 10,
+            "category": "Operator",
+            "description": "The standard .onUserInteractionFinished event including the result of the check value function",
+            "heritable": true
+        }
+    ],
+    "dataTypes": [
+        {
+            "schema": "Schema/Types.Schema.json"
+        }
+    ]
+}

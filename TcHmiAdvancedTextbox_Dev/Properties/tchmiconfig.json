@@ -1,0 +1,199 @@
+﻿{
+  "$schema": "../../Packages/Beckhoff.TwinCAT.HMI.Framework.12.706.0-beta/runtimes/native1.12-tchmi/Schema/TchmiConfig.Schema.json",
+  "basePath": "./framework",
+  "scaleMode": "None",
+  "startupView": "Desktop.view",
+  "loginPage": "",
+  "tcHmiServer": {
+    "websocketIntervalTime": 500,
+    "websocketTimeout": 20000,
+    "websocketSystemTimeout": 60000,
+    "websocketSubscriptionMode": "Change"
+  },
+  "activeTheme": "Base",
+  "themes": {
+    "Base": {
+      "resources": [
+        {
+          "name": "Themes/Base/Base.theme",
+          "description": "",
+          "type": "ThemedValues"
+        },
+        {
+          "name": "Themes/Base/BaseStyle.css",
+          "description": "",
+          "type": "Stylesheet"
+        }
+      ],
+      "replacesThemeForControls": []
+    }
+  },
+  "dependencyFiles": [
+    {
+      "name": "Fonts/Fonts.css",
+      "description": "",
+      "type": "Stylesheet"
+    }
+  ],
+  "userControls": [],
+  "content": [
+    {
+      "url": "Content/Content1.content",
+      "preload": false,
+      "keepAlive": true
+    },
+    {
+      "url": "Content/Content2.content",
+      "preload": false,
+      "keepAlive": false
+    }
+  ],
+  "views": [
+    {
+      "url": "Desktop.view",
+      "preload": false,
+      "keepAlive": false
+    }
+  ],
+  "userFunctions": [],
+  "symbols": {
+    "internal": {
+      "Config": {
+        "value": "",
+        "type": "tchmi:general#/definitions/String",
+        "persist": false,
+        "readonly": false
+      }
+    }
+  },
+  "trigger": [],
+  "actionTemplates": [
+    {
+      "name": "EllipsecolorChanger",
+      "category": "Action Templates",
+      "actions": [
+        {
+          "objectType": "Condition",
+          "active": true,
+          "parts": [
+            {
+              "if": [
+                {
+                  "compare1": {
+                    "objectType": "Symbol",
+                    "valueType": "tchmi:general#/definitions/String",
+                    "symbolExpression": "%tp%Value%/tp%"
+                  },
+                  "compare2": {
+                    "objectType": "StaticValue",
+                    "valueType": "tchmi:general#/definitions/BOOL",
+                    "value": false
+                  },
+                  "compareOperator": "==",
+                  "logic": null
+                }
+              ],
+              "then": [
+                {
+                  "objectType": "WriteToSymbol",
+                  "active": true,
+                  "symbolExpression": "%tp%TargetEllipse_1::FillColor%/tp%",
+                  "value": {
+                    "objectType": "StaticValue",
+                    "valueType": "tchmi:framework#/definitions/Color",
+                    "value": {
+                      "color": "rgba(255, 0, 0, 1)"
+                    }
+                  },
+                  "asyncWait": true
+                }
+              ]
+            },
+            {
+              "else": [
+                {
+                  "objectType": "WriteToSymbol",
+                  "active": true,
+                  "symbolExpression": "%tp%TargetEllipse::FillColor%/tp%",
+                  "value": {
+                    "objectType": "StaticValue",
+                    "valueType": "tchmi:framework#/definitions/Color",
+                    "value": {
+                      "color": "rgba(20, 255, 0, 1)"
+                    }
+                  },
+                  "asyncWait": true
+                }
+              ]
+            }
+          ],
+          "asyncWait": true
+        }
+      ],
+      "parameters": [
+        {
+          "name": "Value",
+          "type": "tchmi:general#/definitions/BOOL",
+          "description": ""
+        },
+        {
+          "name": "TargetEllipse",
+          "type": "tchmi:framework#/definitions/TcHmiEllipse",
+          "description": ""
+        },
+        {
+          "name": "TargetEllipse_1",
+          "type": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiEllipse",
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "languages": {
+    "de-DE": "Localization\\de-DE.localization",
+    "en-US": "Localization\\en-US.localization"
+  },
+  "languageFallback": "",
+  "disableLoadingOptimization": false,
+  "creatorSettings": {
+    "viewport": {
+      "defaultWidth": 800,
+      "defaultHeight": 600
+    }
+  },
+  "binding": {
+    "symbolError": "Ignore"
+  },
+  "packages": [
+    {
+      "name": "Beckhoff.TwinCAT.HMI.Controls",
+      "basePath": "/Beckhoff.TwinCAT.HMI.Controls"
+    },
+    {
+      "name": "Beckhoff.TwinCAT.HMI.Framework",
+      "basePath": "/framework"
+    },
+    {
+      "name": "Beckhoff.TwinCAT.HMI.Functions",
+      "basePath": "/Beckhoff.TwinCAT.HMI.Functions"
+    },
+    {
+      "name": "TcHmi_AdvancedTextbox",
+      "basePath": "/TcHmi_AdvancedTextbox"
+    }
+  ],
+  "keyboardLayouts": [
+    {
+      "url": "KeyboardLayouts/CustomerNumpad.keyboard.json"
+    },
+    {
+      "url": "KeyboardLayouts/German - compact.keyboard.json"
+    },
+    {
+      "url": "KeyboardLayouts/Numpad.keyboard.json"
+    },
+    {
+      "url": "KeyboardLayouts/US - compact.keyboard.json"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+﻿{
+  "$schema": "http://json.schemastore.org/tsconfig",
+  "compileOnSave": true,
+  "compilerOptions": {
+    "module": "none",
+    "target": "es6",
+    "skipLibCheck": false,
+    "lib": [
+      "dom",
+      "scripthost",
+      "es5",
+      "ES6",
+      "es2015.collection",
+      "es2015.proxy",
+      "es2017.intl"
+    ],
+    "types": [],
+    "declaration": true,
+    "sourceMap": true,
+    "noEmitOnError": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strictBindCallApply": true,
+    "strictNullChecks": true,
+    "noImplicitReturns": true,
+    "strictFunctionTypes": false,
+    "strictPropertyInitialization": false,
+    "alwaysStrict": false
+  },
+  "include": [
+    "$(Beckhoff.TwinCAT.HMI.Framework).InstallPath/TcHmi.d.ts",
+    "$(Beckhoff.TwinCAT.HMI.Controls).InstallPath/TcHmiTextbox/TcHmiTextbox.d.ts",
+    "$(Beckhoff.TwinCAT.HMI.Controls).InstallPath/TcHmiKeyboard/TcHmiKeyboard.d.ts"
+  ],
+  "files": [
+    "TcHmi_AdvancedTextboxControl/TcHmi_AdvancedTextboxControl.ts"
+  ]
+}

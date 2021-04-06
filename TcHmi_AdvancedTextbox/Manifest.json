@@ -1,0 +1,26 @@
+﻿{
+  "modules": [
+    {
+        "type": "Control",
+        "basePath": "./TcHmi_AdvancedTextboxControl",
+        "descriptionFile": "Description.json",
+        "toolboxCategory": "Training:201"
+    }
+  ],
+  "provideMetadata": {
+    "toolbox": {
+      "Training": {
+        "201": {
+          "default": "Training",
+          "de-DE": "Training",
+          "en-US": "Training",
+          "it-IT": "Formazione",
+          "nl-NL": "Opleiding"
+        },
+        "200": "Training"
+      }
+    }
+  },
+  "$schema": ".hmiframework/Schema/Manifest.Schema.json",
+  "apiVersion": 1
+}
