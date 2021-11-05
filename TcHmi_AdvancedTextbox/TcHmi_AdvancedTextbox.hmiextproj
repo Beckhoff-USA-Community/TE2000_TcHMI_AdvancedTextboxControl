@@ -19,7 +19,7 @@
     <ProjectName>TcHmi_AdvancedTextbox</ProjectName>
     <Name>TcHmi_AdvancedTextbox</Name>
     <HmiInitial>1.12.706.0</HmiInitial>
-    <HmiRecent>1.12.744.4</HmiRecent>
+    <HmiRecent>1.12.750.1</HmiRecent>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|TwinCAT HMI' ">
     <PlatformTarget>TwinCAT HMI</PlatformTarget>

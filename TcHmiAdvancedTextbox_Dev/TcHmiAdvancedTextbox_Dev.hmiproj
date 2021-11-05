@@ -24,9 +24,9 @@
     <AzureFunctionsVersion>v2</AzureFunctionsVersion>
     <Name>TcHmiAdvancedTextbox_Dev</Name>
     <HmiCommunicationServerAuthPort>13001</HmiCommunicationServerAuthPort>
-    <HmiCommunicationRouterPort>10105</HmiCommunicationRouterPort>
+    <HmiCommunicationRouterPort>10106</HmiCommunicationRouterPort>
     <HmiInitial>1.12.706.0</HmiInitial>
-    <HmiRecent>1.12.744.4</HmiRecent>
+    <HmiRecent>1.12.750.1</HmiRecent>
     <HmiServerNodeAdvancedView>False</HmiServerNodeAdvancedView>
   </PropertyGroup>
   <PropertyGroup>
@@ -140,6 +140,7 @@
     <Folder Include="Properties" />
     <Content Include="Content\Content1.content">
       <SubType>Content</SubType>
+      <Cache>True</Cache>
     </Content>
     <Content Include="Content\Content2.content">
       <SubType>Content</SubType>

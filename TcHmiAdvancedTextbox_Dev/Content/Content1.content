@@ -1,6 +1,6 @@
 ﻿<div id="Content1" data-tchmi-type="TcHmi.Controls.System.TcHmiContent" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-right="0" data-tchmi-bottom="0">
 
-<div id="Content1_AdvTextbox" data-tchmi-type="TcHmi.Controls.Training.AdvancedTextbox" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="18" data-tchmi-left-unit="px" data-tchmi-top="62" data-tchmi-top-unit="px" data-tchmi-width="198" data-tchmi-width-unit="px" data-tchmi-auto-focus-out="True">
+<div id="Content1_AdvTextbox" data-tchmi-type="TcHmi.Controls.Training.AdvancedTextbox" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="18" data-tchmi-left-unit="px" data-tchmi-top="62" data-tchmi-top-unit="px" data-tchmi-width="198" data-tchmi-width-unit="px" data-tchmi-auto-focus-out="True" data-tchmi-right-unit="px" data-tchmi-bottom-unit="px" data-tchmi-text="%s%PLC1.MAIN.Number|BindingMode=TwoWay|BindingEvent=onUserInteractionFinishedWithCheckOk%/s%" data-tchmi-text-font-size-unit="px">
 <script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
 {
   "top": 3,
@@ -25,8 +25,8 @@
   },
   "Strings": {
     "Check": false,
-    "MaxCharacters": 255.0,
-    "ForbidMoreCharacters": false
+    "ForbidMoreCharacters": false,
+    "MaxCharacters": 255.0
   },
   "Tooltip": true
 }

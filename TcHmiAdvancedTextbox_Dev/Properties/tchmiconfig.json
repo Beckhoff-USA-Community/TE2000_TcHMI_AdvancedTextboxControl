@@ -1,5 +1,5 @@
 ﻿{
-  "$schema": "../../Packages/Beckhoff.TwinCAT.HMI.Framework.12.706.0-beta/runtimes/native1.12-tchmi/Schema/TchmiConfig.Schema.json",
+  "$schema": "./../../Packages/Beckhoff.TwinCAT.HMI.Framework.12.750.1/runtimes/native1.12-tchmi/Schema/TchmiConfig.Schema.json",
   "basePath": "./framework",
   "scaleMode": "None",
   "startupView": "Desktop.view",
@@ -39,13 +39,15 @@
   "content": [
     {
       "url": "Content/Content1.content",
-      "preload": false,
-      "keepAlive": true
+      "preload": true,
+      "keepAlive": false,
+      "loadSync": false
     },
     {
       "url": "Content/Content2.content",
       "preload": false,
-      "keepAlive": false
+      "keepAlive": false,
+      "loadSync": false
     }
   ],
   "views": [
@@ -150,8 +152,8 @@
     }
   ],
   "languages": {
-    "de-DE": "Localization\\de-DE.localization",
-    "en-US": "Localization\\en-US.localization"
+    "de-DE": "Localization/de-DE.localization",
+    "en-US": "Localization/en-US.localization"
   },
   "languageFallback": "",
   "disableLoadingOptimization": false,

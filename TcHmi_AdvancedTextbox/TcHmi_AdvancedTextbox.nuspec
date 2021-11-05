@@ -1,21 +1,18 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<package>
+﻿<?xml version="1.0"?>
+<package xmlns="">
   <metadata>
     <id>TcHmi_AdvancedTextbox</id>
     <version>1.0.4</version>
     <description>TcHmi 1.12 training sample code for an advanced textbox</description>
     <authors>Beckhoff-USA</authors>
     <title>TcHmi_AdvancedTextbox</title>
-	<license type="file">License.txt</license>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <releaseNotes>Updated licensing</releaseNotes>
     <copyright>Copyright 2020</copyright>
     <tags>TwinCAT HMI</tags>
+    <license type="file">License.txt</license>
     <dependencies>
-      <group targetFramework="native1.12-tchmi">
-        <dependency id="Beckhoff.TwinCAT.HMI.Framework" version="12.742.5" />
-        <dependency id="Beckhoff.TwinCAT.HMI.Controls" version="12.742.5" />
-      </group>
+      <group targetFramework="native1.12-tchmi" />
     </dependencies>
   </metadata>
   <files>

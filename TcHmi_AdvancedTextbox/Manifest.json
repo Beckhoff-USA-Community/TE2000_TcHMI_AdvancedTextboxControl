@@ -1,10 +1,10 @@
 ﻿{
   "modules": [
     {
-        "type": "Control",
-        "basePath": "./TcHmi_AdvancedTextboxControl",
-        "descriptionFile": "Description.json",
-        "toolboxCategory": "Training:201"
+      "type": "Control",
+      "basePath": "./TcHmi_AdvancedTextboxControl",
+      "descriptionFile": "Description.json",
+      "toolboxCategory": "Training:201"
     }
   ],
   "provideMetadata": {
